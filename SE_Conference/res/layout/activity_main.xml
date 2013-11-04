@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0sp"
+    android:paddingLeft="0sp"
+    android:paddingRight="0sp"
+    android:paddingTop="0sp"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/skyblue">
+        
+        
+        <Button
+            android:layout_width="wrap_content"
+       		android:layout_height="wrap_content" 
+       		android:id="@+id/Drawer_Btn"
+       		android:background="@drawable/drawer_btn"/>
+        
+        <TextView
+             android:layout_width="fill_parent"
+       		 android:layout_height="wrap_content" 
+       		 android:text="ICSSP"
+       		 android:layout_gravity="center"
+       		 android:textSize="30sp"/>
+            
+        
+    </LinearLayout>
+    
+     <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    
+	<LinearLayout
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical">
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	>
+	        <TextView
+	            android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="News"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:id="@+id/News_textview"
+	    		android:textSize="15sp"/>
+	        <TextView
+	            android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="Papers"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:id="@+id/Papers_textview"
+	    		android:textSize="15sp"/>
+	        <TextView
+	            android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="Agenda"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:id="@+id/Agenda_textview"
+	    		android:textSize="15sp"/>
+	        <TextView
+	            android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="Maps"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:id="@+id/Maps_textview"
+	    		android:textSize="15sp"/>
+	        <TextView
+	            android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="Info"
+	    		android:layout_weight="1"
+	    		android:gravity="center"
+	    		android:id="@+id/Info_textview"
+	    		android:textSize="15sp"/>
+	        
+	    </LinearLayout>
+	    
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/viewpager"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent">
+	                
+	    </android.support.v4.view.ViewPager>
+    
+        
+    </LinearLayout>
+    <ListView
+        	android:id="@+id/drawer"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@color/antiquewhite"
+            android:dividerHeight="0dp" ></ListView>
+    
+	</android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

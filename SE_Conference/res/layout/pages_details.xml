@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pages_details_linearlayout" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+    <TextView  
+        android:id="@+id/pages_text" 
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:scrollbars="vertical"   
+        android:singleLine="false"  
+        android:text="Use CSS to get all the WEB page of the entire site appearance control . Set margins , page fills , borders , colors and backgrounds. For any page element to set the font size and change the font appearance. Creating dynamic activity link. Create CSS style fully compatible webpage.\r\nThe main advantage of CSS is that you do not have to modify the page file , just modify the CSS files attached to this page , you can achieve different display effects, including background color , background image, text size, color, border ...... and so on. Site layout, layout requirements , can not occupy the larger margins put part pictures, body position and no less, with pictures and articles to balance the excessive use of the big picture , greatly increasing the traffic flow , affecting the web surfer to read speed , to optimize web pages with CSS as much as possible , the flexibility to use CSS, you can make the page pretty sophisticated and it is not taking up too many system resources, so it is necessary to take the time to look .\r\nTable layout seems to have become a standard , casually browsing a site , they must be using tables for layout . Table layout has the advantage that it dealt with different objects , but do not worry about the impact between different objects . And in the positioning table pictures and text easier than using CSS . Table layout only drawback is that when you use too many tables , the page download speed is affected. For table layout , you can easily find a site's home page, and then save it as an HTML file , open it using a web editing tool ( to WYSIWYG software ) , you will see how to use this page is a table .\r\nHome is designed primarily web design software operation and technology issues . However, for home design, production was beautiful , can not be separated on the homepage for art processing and handling , which would involve some basic knowledge of art . This article will introduce some home design often involves the principles of art for you when making home made reference .\r\nHome beautification first thing to consider style positioning. Any home should be decided according to the theme of the content and form of its style , because only the perfect unity of form and content , in order to achieve the desired publicity. Currently home growing range of applications , including almost all of the industry , there are numerous all-inclusive, but can be summed up in general there are so few broad categories: news agencies, government agencies, education and culture , entertainment, arts, commerce, network center. For the different nature of the industry, should reflect the different home styles , like the dress, should depend on the gender and age levels varies same. For example: the general government should be more dignified home -style , while the entertainment industry can be lively number ; cultural and educational sectors Hom"  />
+
+
+</LinearLayout>

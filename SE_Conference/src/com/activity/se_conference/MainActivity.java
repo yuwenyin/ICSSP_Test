@@ -2,18 +2,14 @@ package com.activity.se_conference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-
+import myViews.MyPagerAdapter;
 import android.os.Bundle;
-import android.app.Activity;
-import android.app.Fragment;
+import android.annotation.SuppressLint;
 import android.content.res.Resources;
-import android.database.DataSetObserver;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
@@ -21,17 +17,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
 	
@@ -52,6 +44,7 @@ public class MainActivity extends FragmentActivity {
 	public static Resources resources;	
 	private int currentPage = 0;
 	private boolean drawer_open = false;
+	@SuppressLint("UseSparseArrays")
 	Map<Integer,View> map = new HashMap<Integer,View>();
 
 	@Override
@@ -92,7 +85,6 @@ public class MainActivity extends FragmentActivity {
 		map.put(3,Maps_textview);
 		map.put(4,Info_textview);
 		
-		//ͨ��inflater�Ҳ����ļ�   
 		LayoutInflater mLi = LayoutInflater.from(this);     
         news_view = mLi.inflate(R.layout.news, null);
         papers_view = mLi.inflate(R.layout.papers, null);
@@ -102,7 +94,6 @@ public class MainActivity extends FragmentActivity {
         
         InitViewpager();
 
-		//�����ǩ��ת
 		News_textview.setOnClickListener(new MyViewPageListener(0));
 		Papers_textview.setOnClickListener(new MyViewPageListener(1));
 		Agenda_textview.setOnClickListener(new MyViewPageListener(2));
@@ -187,7 +178,6 @@ public class MainActivity extends FragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -200,7 +190,6 @@ public class MainActivity extends FragmentActivity {
         views.add(agenda_view);
         views.add(maps_view);
         views.add(info_view);
-        
         PagerAdapter mPagerAdapter = new MyPagerAdapter(views);
 		mViewPager.setAdapter(mPagerAdapter);
 	}

@@ -5,8 +5,39 @@
     android:orientation="vertical" >
     
     <TextView  
-        android:layout_width="wrap_content"  
+        android:layout_width="fill_parent"  
         android:layout_height="wrap_content"  
-        android:text="什么也没有"  />
+        android:text="Meeting Address MAP" 
+        android:textSize="18sp"
+        android:id="@+id/Address_TextView"
+        android:background="@color/skyblue"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200sp"
+        android:background="@color/gold"
+        android:id="@+id/Address_Image"
+        android:visibility="gone"/>
+    
+    <TextView  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:text="Inside Info Image" 
+        android:textSize="18sp"
+        android:id="@+id/Location_TextView"
+        android:background="@color/skyblue"
+        />
+    
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Image_List"
+        />
+<!--     <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100sp"
+        android:background="@color/blueviolet"
+        android:id="@+id/Location_Image"
+        android:visibility="gone"/>
+         -->
 
 </LinearLayout>

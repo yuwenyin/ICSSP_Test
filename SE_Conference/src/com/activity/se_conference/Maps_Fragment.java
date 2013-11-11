@@ -1,10 +1,19 @@
 package com.activity.se_conference;
 
+import java.util.ArrayList;
+
+import myViews.MyImageListAdapter;
+import myViews.MyPopDialogForImage;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -30,8 +39,28 @@ public class Maps_Fragment extends Fragment{
 		LocationTextView = (TextView) view.findViewById(R.id.Location_TextView);
 		ImageList = (ListView)view.findViewById(R.id.Image_List);
 		
-		ImageList.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.list_layout, 
-				new String[]{"Image1","Image2","Image3","Image4","Image5","Image6"}));
+		ArrayList<Bitmap> bitmaplist = new ArrayList<Bitmap>(); 
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test1));
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test2));
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test3));
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test4));
+/*			bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test5));
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test6));
+		bitmaplist.add(BitmapFactory.decodeResource(getResources(), R.drawable.test7));*/
+		//比例为8:5的图片显示效果最好？
+		
+		ImageList.setAdapter(new MyImageListAdapter(getActivity(), bitmaplist));
+		ImageList.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long arg3) {
+				// TODO Auto-generated method stub
+				new MyPopDialogForImage(getActivity(), position).show();
+				
+			}
+		});
+		
 		
 		AddressTextView.setOnClickListener(new View.OnClickListener() {
 			
@@ -48,8 +77,7 @@ public class Maps_Fragment extends Fragment{
 				}
 			}
 		});
-		
-	
+			
 		LocationTextView.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -65,8 +93,7 @@ public class Maps_Fragment extends Fragment{
 				}
 			}
 		});
-		
-		
+			
         return view;
 
 	}
